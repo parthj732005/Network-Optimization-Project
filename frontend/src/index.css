@@ -1,0 +1,30 @@
+
+body { 
+    margin: 0; 
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; 
+    padding: 12px; background: #fbfbfd; color: #0f172a; }
+
+input { 
+    margin-left: 6px; 
+    padding: 6px; 
+    border: 1px solid #d1d5db; 
+    border-radius: 6px; 
+}
+
+label { 
+    display: flex; 
+    flex-direction: column; 
+    font-size: 14px; 
+}
+
+button { 
+    cursor: pointer; 
+    border-radius: 6px; 
+    border: none; 
+    background: #0ea5a4; 
+    color: white; 
+    padding: 8px 12px; 
+}
+
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+table { width: 100%; }
