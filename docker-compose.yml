@@ -1,0 +1,32 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        
+        VITE_MODEL_BASE: "/"
+    
+    container_name: frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - modelserver
+    networks:
+      - appnet
+
+  modelserver:
+    build:
+      context: ./modelserver
+      dockerfile: Dockerfile
+    container_name: modelserver
+    environment:
+      - AllOW_CORS=false
+    ports:
+      - "5000:5000"
+    networks:
+      - appnet
+
+networks:
+  appnet:
+    driver: bridge
