@@ -9,20 +9,20 @@ export default function OptimizePage() {
 
   const { mutate, data, isLoading, error: apiError } = useOptimize();
 
-  
+
   const handleCustomerChange = (e) => {
     setNumCustomers(e.target.value);
     if (validationError) setValidationError(null);
   };
 
-  
+
   const validateFcEntry = () => {
     const nCust = Number(numCustomers);
     if (!numCustomers) {
       setValidationError("Please enter the Number of Customers first.");
       return false;
     }
-    
+
     if (nCust < 100 || nCust > 4000) {
       setValidationError("Number of Customers must be between 100 and 4000.");
       return false;
@@ -35,7 +35,7 @@ export default function OptimizePage() {
     if (validateFcEntry()) setNumFcs(e.target.value);
   };
 
-  
+
   const validateKEntry = () => {
     if (!numFcs || Number(numFcs) <= 0) {
       setValidationError("Please enter a valid Number of FC Candidates before entering k.");
@@ -49,16 +49,16 @@ export default function OptimizePage() {
     if (validateKEntry()) setK(e.target.value);
   };
 
-  
+
   const onSubmit = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     setValidationError(null);
 
     const nCust = Number(numCustomers);
     const nFc = Number(numFcs);
     const nK = Number(k);
 
-    
+
     if (!nCust) return setValidationError("Number of Customers is required.");
     if (nCust < 100 || nCust > 4000) return setValidationError("Number of Customers must be between 100 and 4000.");
     if (!nFc) return setValidationError("Number of FC Candidates is required.");
@@ -108,7 +108,7 @@ export default function OptimizePage() {
           <h2>Summary</h2>
           <div><strong>Total cost:</strong> {String(data.total_cost)}</div>
 
-          
+
           <h3>Potential FC Candidates ({data.all_fc_candidates?.length || 0})</h3>
           <div style={{ maxHeight: 260, overflow: "auto", marginBottom: 12 }}>
             <table border="1" cellPadding="6" style={{ borderCollapse: "collapse", width: "100%" }}>
@@ -128,7 +128,7 @@ export default function OptimizePage() {
             </table>
           </div>
 
-          
+
           <h3>Selected FCs ({data.selected_fcs?.length || 0})</h3>
           <div style={{ maxHeight: 260, overflow: "auto", marginBottom: 12 }}>
             <table border="1" cellPadding="6" style={{ borderCollapse: "collapse", width: "100%" }}>
@@ -148,8 +148,8 @@ export default function OptimizePage() {
             </table>
           </div>
 
-          
-          <h3>Customers (first 20)</h3>
+
+          <h3>Customer Geolocations(first 20)</h3>
           <div style={{ maxHeight: 260, overflow: "auto", marginBottom: 12 }}>
             <table border="1" cellPadding="6" style={{ borderCollapse: "collapse", width: "100%" }}>
               <thead>
