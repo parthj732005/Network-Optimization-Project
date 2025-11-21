@@ -72,7 +72,7 @@ export default function OptimizePage() {
 
   return (
     <div style={{ maxWidth: 1100, margin: "28px auto", padding: 16, fontFamily: "system-ui, sans-serif" }}>
-      <h1>Fulfilment Center (FC) Networrk Optimization for Retail/E-Commerce</h1>
+      <h1>Fulfilment Center (FC) Network Optimization for Retail/E-Commerce</h1>
 
       <form onSubmit={onSubmit} style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 18 }}>
         <label>
