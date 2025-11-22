@@ -56,7 +56,7 @@ The project is split into two primary services: the **Model Server (backend)** a
 ```
 fc-optimization/
 │
-├── working/                        
+├── Model_Notebook/                        
 │   ├── Data_Preprocessing.ipynb
 │   ├── Optimization_code.ipynb
 │   ├── US Zip Codes from 2013 Government Data.csv
