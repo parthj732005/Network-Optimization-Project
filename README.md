@@ -32,10 +32,10 @@ Outputs:
 
 Generates a **Base64 PNG map** showing:
 
-  * 🟦 Customer locations
-  * 🟠 FC candidates
-  * 🔴 Selected FCs
-  * 🟢 Assignment lines
+  * 🔵 Customer locations
+  * ▲ FC candidates
+  * 🔺 Selected FCs
+  * ➖ Assignment lines
 
 ### 💻 Frontend (React)
 
