@@ -190,6 +190,7 @@ docker-compose down
 
 ## ▶ Usage
 
+Note: The application requires internet connection for the first run to fetch data about USA map from the internet. 
 1.  Navigate to the **Frontend** application at `http://localhost:3000`.
 2.  Enter values for:
       * Customer Geolocations (ZIP Codes)
