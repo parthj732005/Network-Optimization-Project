@@ -62,7 +62,7 @@ export default function OptimizePage() {
     if (!nCust) return setValidationError("Number of Customers is required.");
     if (nCust < 100 || nCust > 1000) return setValidationError("Number of Customers must be between 100 and 1000.");
     if (!nFc) return setValidationError("Number of FC Candidates is required.");
-    if (!nk) return setValidationError("k (FCs to open) is required.");
+    if (!nK) return setValidationError("k (FCs to open) is required.");
     if (nK > nFc) return setValidationError(`k (${nK}) cannot be greater than FC Candidates (${nFc}).`);
 
     mutate({ num_customers: nCust, num_fc_candidates: nFc, k: nK });
@@ -178,7 +178,4 @@ export default function OptimizePage() {
     </div>
   );
 }
-
-
-
 
